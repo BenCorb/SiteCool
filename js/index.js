@@ -14,16 +14,17 @@ function enterSite() {
     onBoard = true;
 }
 
-document.addEventListener('click', event => {
+document.addEventListener('mousedown', () => {
     if (onBoard) {
         explosionDeConfettis();
     }
     bananaCursor.style.scale = '0.9';
     bananaCursor.style.transition = 'scale 0.1s';
-    setTimeout(() => {
-        bananaCursor.style.scale = '1';
-        bananaCursor.style.transition = 'scale 0.1s';
-    }, 100);
+});
+
+document.addEventListener('mouseup', () => {
+    bananaCursor.style.scale = '1';
+    bananaCursor.style.transition = 'scale 0.1s';
 });
 
 function explosionDeConfettis() {
