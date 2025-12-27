@@ -29,12 +29,12 @@ document.addEventListener('mouseup', () => {
 
 function explosionDeConfettis() {
     const colors = ['#f94144', '#f3722c', '#f9c74f', '#90be6d', '#43aa8b', '#577590'];
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 128; i++) {
         const confetti = document.createElement('div');
         confetti.className = 'confetti';
         confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
         confetti.style.left = Math.random() * window.innerWidth + 'px';
-        confetti.style.top = '-10px';
+        confetti.style.top = '-25px';
         confetti.style.width = confetti.style.height = (Math.random() * 10 + 5) + 'px';
         confetti.style.animationDuration = (2 + Math.random() * 2) + 's';
         document.body.appendChild(confetti);
